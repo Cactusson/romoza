@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Romoza</title>
+</head>
+<body>
+    <h1>I</h1>
+    <h2>{{ i_watched.count }} / {{ i_watchlist }}</h2>
+
+    {% for movie in i_watched %}
+        <p>{{ movie.i_watched_date|date:"d M Y" }} <b>{{ movie }}</b></p>
+    {% endfor %}
+
+    <h1>O</h1>
+    <h2>{{ o_watched.count }} / {{ o_watchlist }}</h2>
+
+    {% for movie in o_watched %}
+        <p>{{ movie.o_watched_date|date:"d M Y" }} <b>{{ movie }}</b></p>
+    {% endfor %}
+</body>
+</html>
